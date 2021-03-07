@@ -1,98 +1,24 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-CN">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
-<meta name="theme-color" content="#222"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/ArkhalisDragon/ArkhalisDragon.github.io.git/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/ArkhalisDragon/ArkhalisDragon.github.io.git/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/ArkhalisDragon/ArkhalisDragon.github.io.git/images/favicon.png">
+  <link rel="mask-icon" href="/ArkhalisDragon/ArkhalisDragon.github.io.git/images/favicon.png" color="#222">
+
+<link rel="stylesheet" href="/ArkhalisDragon/ArkhalisDragon.github.io.git/css/main.css">
 
 
+<link rel="stylesheet" href="/ArkhalisDragon/ArkhalisDragon.github.io.git/lib/font-awesome/css/all.min.css">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link rel="stylesheet" href="/ArkhalisDragon/ArkhalisDragon.github.io.git/lib/font-awesome/css/font-awesome.min.css?v=4.7.0"/>
-
-<link rel="stylesheet" href="/ArkhalisDragon/ArkhalisDragon.github.io.git/css/main.css?v=7.2.0"/>
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/ArkhalisDragon/ArkhalisDragon.github.io.git/images/apple-touch-icon-next.png?v=7.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/ArkhalisDragon/ArkhalisDragon.github.io.git/images/favicon-32x32-next.png?v=7.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/ArkhalisDragon/ArkhalisDragon.github.io.git/images/favicon-16x16-next.png?v=7.2.0">
-
-
-  <link rel="mask-icon" href="/ArkhalisDragon/ArkhalisDragon.github.io.git/images/logo.svg?v=7.2.0" color="#222">
-
-
-
-
-
-
-
-<script id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '',
-    scheme: 'Muse',
-    version: '7.2.0',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
-    back2top: true,
-    back2top_sidebar: false,
-    fancybox: false,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-  
-
-
-
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"github.com","root":"/ArkhalisDragon/ArkhalisDragon.github.io.git/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"搜索文章","hits_empty":"我们没有找到这篇文章: ${query}","hits_stats":"${hits} 个结果在 ${time} ms内被找到"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
   <meta name="description" content="不要活在期望中。">
 <meta property="og:type" content="website">
@@ -104,19 +30,16 @@
 <meta property="article:author" content="Arkhalis Dragon">
 <meta name="twitter:card" content="summary">
 
+<link rel="canonical" href="https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/">
 
 
-
-
-  
-  
-  <link rel="canonical" href="https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/"/>
-
-
-
-<script id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
   };
 </script>
 
@@ -128,15 +51,8 @@
 
 
 
-
-
-
-
-
-
   <noscript>
   <style>
-  .use-motion .motion-element,
   .use-motion .brand,
   .use-motion .menu-item,
   .sidebar-inner,
@@ -145,9 +61,8 @@
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
+  .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .logo,
   .use-motion .site-title,
   .use-motion .site-subtitle {
     opacity: initial;
@@ -159,218 +74,157 @@
   </style>
 </noscript>
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+</head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">World of Dragons</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-    
-    
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">World of Dragons</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
   </div>
 </div>
 
 
 
+
 <nav class="site-nav">
-  
-    <ul id="menu" class="menu">
-      
-        
-        
-        
-          
-          <li class="menu-item menu-item-home">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
 
-    
-    
-      
-    
-
-    
-
-    <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-home&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;首页</a>
+    <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/" rel="section"><i class="home fa-fw"></i>首页</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-about">
 
-    
-    
-      
-    
-
-    
-
-    <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/archives/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-archive&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;归档</a>
+    <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/about/" rel="section"><i class="user fa-fw"></i>关于</a>
 
   </li>
+        <li class="menu-item menu-item-tags">
 
-      
-      
-    </ul>
-  
+    <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/tags/" rel="section"><i class="tags fa-fw"></i>标签</a>
 
-  
-    
+  </li>
+        <li class="menu-item menu-item-categories">
 
-  
+    <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/categories/" rel="section"><i class="th fa-fw"></i>分类</a>
 
-  
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/archives/" rel="section"><i class="archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
 </nav>
 
 
 
-  
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container"></div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="algolia-results">
+  <div id="algolia-stats"></div>
+  <div id="algolia-hits"></div>
+  <div id="algolia-pagination" class="algolia-pagination"></div>
+</div>
 
-
+      
+    </div>
+  </div>
 
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
           
-          <div id="content" class="content">
+
+          <div class="content index posts-expand">
             
-  <section id="posts" class="posts-expand">
-    
       
-
-  
-
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/ArkhalisDragon/ArkhalisDragon.github.io.git/2021/02/25/%E6%AC%A2%E8%BF%8E%E8%AF%84%E4%BB%B7%E4%B8%AA%E4%BA%BA%E7%A0%81%E9%A3%8E/"/>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/2021/02/25/%E6%AC%A2%E8%BF%8E%E8%AF%84%E4%BB%B7%E4%B8%AA%E4%BA%BA%E7%A0%81%E9%A3%8E/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Arkhalis Dragon"/>
-      <meta itemprop="description" content="不要活在期望中。"/>
-      <meta itemprop="image" content="/ArkhalisDragon/ArkhalisDragon.github.io.git/images/avatar.gif"/>
+      <meta itemprop="image" content="https://i.loli.net/2020/12/27/nRLoGE6vAXtHgsf.png">
+      <meta itemprop="name" content="Arkhalis Dragon">
+      <meta itemprop="description" content="不要活在期望中。">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="World of Dragons"/>
+      <meta itemprop="name" content="World of Dragons">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/2021/02/25/%E6%AC%A2%E8%BF%8E%E8%AF%84%E4%BB%B7%E4%B8%AA%E4%BA%BA%E7%A0%81%E9%A3%8E/" class="post-title-link" itemprop="url">AEC的码风</a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/2021/02/25/%E6%AC%A2%E8%BF%8E%E8%AF%84%E4%BB%B7%E4%B8%AA%E4%BA%BA%E7%A0%81%E9%A3%8E/" class="post-title-link" itemprop="url">AEC的码风</a>
+        </h2>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2021-02-25 20:12:27" itemprop="dateCreated datePublished" datetime="2021-02-25T20:12:27+08:00">2021-02-25</time>
             </span>
-          
-
-          
-            
-
-            
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-06-06 08:23:32" itemprop="dateModified" datetime="2019-06-06T08:23:32+08:00">2019-06-06</time>
               </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br/>
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -378,12 +232,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h1 id="欢迎莅临"><a href="#欢迎莅临" class="headerlink" title="欢迎莅临"></a>欢迎莅临</h1><p>进入正题。</p>
+          <h1 id="欢迎莅临"><a href="#欢迎莅临" class="headerlink" title="欢迎莅临"></a>欢迎莅临</h1><p>进入正题。</p>
 <h3 id="正题"><a href="#正题" class="headerlink" title="正题"></a>正题</h3><p>1.头文件中间不加空格，虽然我知道这看上去不大美观。</p>
 <p>2.main函数里面几乎没有定义变量，i和j都是在循环中定义的。</p>
 <p>3.用Dev-C++ 5.11的我特别喜欢”格式化-&gt;风格-&gt;Allman”，所以for循环的三个表达式中间一般要有一个空格(当然，是格式化的时候自动加的)。</p>
@@ -396,148 +245,62 @@
 
 <p>有什么想法没有？欢迎在评论区留言评价。</p>
 
-          
-        
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
       
-
-  
-
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/ArkhalisDragon/ArkhalisDragon.github.io.git/2021/02/25/README/"/>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/2021/02/25/README/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Arkhalis Dragon"/>
-      <meta itemprop="description" content="不要活在期望中。"/>
-      <meta itemprop="image" content="/ArkhalisDragon/ArkhalisDragon.github.io.git/images/avatar.gif"/>
+      <meta itemprop="image" content="https://i.loli.net/2020/12/27/nRLoGE6vAXtHgsf.png">
+      <meta itemprop="name" content="Arkhalis Dragon">
+      <meta itemprop="description" content="不要活在期望中。">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="World of Dragons"/>
+      <meta itemprop="name" content="World of Dragons">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/2021/02/25/README/" class="post-title-link" itemprop="url">Welcome to the World of Assassins</a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/2021/02/25/README/" class="post-title-link" itemprop="url">Welcome to the World of Assassins</a>
+        </h2>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2021-02-25 20:12:27" itemprop="dateCreated datePublished" datetime="2021-02-25T20:12:27+08:00">2021-02-25</time>
             </span>
-          
-
-          
-            
-
-            
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-06-06 08:22:47" itemprop="dateModified" datetime="2019-06-06T08:22:47+08:00">2019-06-06</time>
               </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br/>
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -545,156 +308,65 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h1 id="This-is-the-Lineage-of-Assassins"><a href="#This-is-the-Lineage-of-Assassins" class="headerlink" title="This is the Lineage of Assassins!"></a>This is the Lineage of Assassins!</h1><h1 id="Welcome-to-Assassins-Brotherhood"><a href="#Welcome-to-Assassins-Brotherhood" class="headerlink" title="Welcome to Assassins Brotherhood!"></a>Welcome to Assassins Brotherhood!</h1><p>If you are an assassin or you want to talk to someone about assassins,you can join the team“<a target="_blank" rel="noopener" href="https://www.luogu.org/team/show?teamid=15947">Assassins Brotherhood</a>”,we can exchange and discuss there!</p>
+          <h1 id="This-is-the-Lineage-of-Assassins"><a href="#This-is-the-Lineage-of-Assassins" class="headerlink" title="This is the Lineage of Assassins!"></a>This is the Lineage of Assassins!</h1><h1 id="Welcome-to-Assassins-Brotherhood"><a href="#Welcome-to-Assassins-Brotherhood" class="headerlink" title="Welcome to Assassins Brotherhood!"></a>Welcome to Assassins Brotherhood!</h1><p>If you are an assassin or you want to talk to someone about assassins,you can join the team“<a target="_blank" rel="noopener" href="https://www.luogu.org/team/show?teamid=15947">Assassins Brotherhood</a>”,we can exchange and discuss there!</p>
 <p>　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 —-from AECEAS</p>
 
-          
-        
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
       
-
-  
-
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/ArkhalisDragon/ArkhalisDragon.github.io.git/2021/02/25/Hexo%E7%9A%84%E5%9F%9F%E5%90%8D/"/>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/2021/02/25/Hexo%E7%9A%84%E5%9F%9F%E5%90%8D/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Arkhalis Dragon"/>
-      <meta itemprop="description" content="不要活在期望中。"/>
-      <meta itemprop="image" content="/ArkhalisDragon/ArkhalisDragon.github.io.git/images/avatar.gif"/>
+      <meta itemprop="image" content="https://i.loli.net/2020/12/27/nRLoGE6vAXtHgsf.png">
+      <meta itemprop="name" content="Arkhalis Dragon">
+      <meta itemprop="description" content="不要活在期望中。">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="World of Dragons"/>
+      <meta itemprop="name" content="World of Dragons">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/2021/02/25/Hexo%E7%9A%84%E5%9F%9F%E5%90%8D/" class="post-title-link" itemprop="url">Hexo博客的域名</a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/2021/02/25/Hexo%E7%9A%84%E5%9F%9F%E5%90%8D/" class="post-title-link" itemprop="url">Hexo博客的域名</a>
+        </h2>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2021-02-25 20:12:27" itemprop="dateCreated datePublished" datetime="2021-02-25T20:12:27+08:00">2021-02-25</time>
             </span>
-          
-
-          
-            
-
-            
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-06-06 08:22:26" itemprop="dateModified" datetime="2019-06-06T08:22:26+08:00">2019-06-06</time>
               </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br/>
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -702,12 +374,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h2 id="注意，本篇blog只讲述搭建Hexo博客中域名的申请和解析！"><a href="#注意，本篇blog只讲述搭建Hexo博客中域名的申请和解析！" class="headerlink" title="注意，本篇blog只讲述搭建Hexo博客中域名的申请和解析！"></a>注意，本篇blog只讲述搭建Hexo博客中域名的申请和解析！</h2><p>曾参考<a target="_blank" rel="noopener" href="https://ouuan.github.io/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8C%97/">博文</a></p>
+          <h2 id="注意，本篇blog只讲述搭建Hexo博客中域名的申请和解析！"><a href="#注意，本篇blog只讲述搭建Hexo博客中域名的申请和解析！" class="headerlink" title="注意，本篇blog只讲述搭建Hexo博客中域名的申请和解析！"></a>注意，本篇blog只讲述搭建Hexo博客中域名的申请和解析！</h2><p>曾参考<a target="_blank" rel="noopener" href="https://ouuan.github.io/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8C%97/">博文</a></p>
 <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>上面提到的那篇博客个人认为域名申请部分还不够易懂（我们班三个OIer看了半天，折腾了一天半才弄好），因此，我将自己的经验整理了一下，发布成这份博客。</p>
 <h3 id="必备工具"><a href="#必备工具" class="headerlink" title="必备工具"></a>必备工具</h3><ol>
 <li><p>搭建Hexo必备的各种软件（node.js等等）</p>
@@ -775,148 +442,62 @@
 <h3 id="Hexo的优缺点"><a href="#Hexo的优缺点" class="headerlink" title="Hexo的优缺点"></a>Hexo的优缺点</h3><p>优点就是经济，你可以完全免费就搭建一个，“装备不花一分钱”。</p>
 <p>缺点就是因为Hexo是静态博客，他是只读取缓存，意思就是你发布了一篇博客之后通常都要等上五分钟左右才能看到，因为你上传的文章GitHub不会马上给你更新，网站的更新会有一个周期，周期时间到了，GitHub才会给你“编译”一下你的博客源文件，生成缓存，因此Hexo通常不是即时性的，<del>虽然这并不是什么大问题</del></p>
 
-          
-        
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
       
-
-  
-
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/ArkhalisDragon/ArkhalisDragon.github.io.git/2021/02/25/GCC/"/>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/2021/02/25/GCC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Arkhalis Dragon"/>
-      <meta itemprop="description" content="不要活在期望中。"/>
-      <meta itemprop="image" content="/ArkhalisDragon/ArkhalisDragon.github.io.git/images/avatar.gif"/>
+      <meta itemprop="image" content="https://i.loli.net/2020/12/27/nRLoGE6vAXtHgsf.png">
+      <meta itemprop="name" content="Arkhalis Dragon">
+      <meta itemprop="description" content="不要活在期望中。">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="World of Dragons"/>
+      <meta itemprop="name" content="World of Dragons">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/2021/02/25/GCC/" class="post-title-link" itemprop="url">GCC 8.1.0</a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/2021/02/25/GCC/" class="post-title-link" itemprop="url">GCC 8.1.0</a>
+        </h2>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2021-02-25 20:12:27" itemprop="dateCreated datePublished" datetime="2021-02-25T20:12:27+08:00">2021-02-25</time>
             </span>
-          
-
-          
-            
-
-            
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-10-26 18:38:31" itemprop="dateModified" datetime="2019-10-26T18:38:31+08:00">2019-10-26</time>
               </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br/>
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -924,12 +505,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h2 id="为什么要更新GCC-8-1-0？"><a href="#为什么要更新GCC-8-1-0？" class="headerlink" title="为什么要更新GCC 8.1.0？"></a>为什么要更新GCC 8.1.0？</h2><p>GCC 8.1.0解决了Dev-C++ 5.11自带的GCC 4.9.2的调试中查看变量的问题（修复了不能查看STL的bug和一添加STL变量查看就卡死的bug）</p>
+          <h2 id="为什么要更新GCC-8-1-0？"><a href="#为什么要更新GCC-8-1-0？" class="headerlink" title="为什么要更新GCC 8.1.0？"></a>为什么要更新GCC 8.1.0？</h2><p>GCC 8.1.0解决了Dev-C++ 5.11自带的GCC 4.9.2的调试中查看变量的问题（修复了不能查看STL的bug和一添加STL变量查看就卡死的bug）</p>
 <h2 id="配料："><a href="#配料：" class="headerlink" title="配料："></a>配料：</h2><p>1.一台装配了Dev-C++（推荐5.11）的Windows电脑。</p>
 <p>2.一个GCC 8.1.0的rar压缩包（好吧其实是MinGW）。</p>
 <p>不知道Dev-C++去哪里下？<a target="_blank" rel="noopener" href="https://pc.qq.com/detail/16/detail_163136.html">戳我（注意点“普通下载”）</a></p>
@@ -951,134 +527,55 @@
 <p>在右上角的搜索框里输入“.dll”，搜索所有的后缀名为.dll的文件，全部复制到C：\Windows\system32目录下，这样可以部分解决因缺少.dll文件而引起的崩溃/错误（博主就是因为有一次崩溃了之后才花了两天时间摸索解决方法的）。</p>
 <h2 id="后续事项"><a href="#后续事项" class="headerlink" title="后续事项"></a>后续事项</h2><p>如果你不幸失败了，你可以将原来备份的文件复制回去，然后重复以上5-6过程。</p>
 
-          
-        
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
       
-
-  
-
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/ArkhalisDragon/ArkhalisDragon.github.io.git/2021/02/25/hello-world/"/>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/2021/02/25/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Arkhalis Dragon"/>
-      <meta itemprop="description" content="不要活在期望中。"/>
-      <meta itemprop="image" content="/ArkhalisDragon/ArkhalisDragon.github.io.git/images/avatar.gif"/>
+      <meta itemprop="image" content="https://i.loli.net/2020/12/27/nRLoGE6vAXtHgsf.png">
+      <meta itemprop="name" content="Arkhalis Dragon">
+      <meta itemprop="description" content="不要活在期望中。">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="World of Dragons"/>
+      <meta itemprop="name" content="World of Dragons">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/2021/02/25/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/2021/02/25/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2021-02-25 20:07:16" itemprop="dateCreated datePublished" datetime="2021-02-25T20:07:16+08:00">2021-02-25</time>
             </span>
-          
-
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br/>
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1086,12 +583,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
@@ -1105,148 +597,62 @@
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
-          
-        
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
       
-
-  
-
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/ArkhalisDragon/ArkhalisDragon.github.io.git/2020/06/07/%E8%87%B4%E4%B8%83%E7%8F%AD%E5%90%8C%E5%AD%A6/"/>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/2020/06/07/%E8%87%B4%E4%B8%83%E7%8F%AD%E5%90%8C%E5%AD%A6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Arkhalis Dragon"/>
-      <meta itemprop="description" content="不要活在期望中。"/>
-      <meta itemprop="image" content="/ArkhalisDragon/ArkhalisDragon.github.io.git/images/avatar.gif"/>
+      <meta itemprop="image" content="https://i.loli.net/2020/12/27/nRLoGE6vAXtHgsf.png">
+      <meta itemprop="name" content="Arkhalis Dragon">
+      <meta itemprop="description" content="不要活在期望中。">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="World of Dragons"/>
+      <meta itemprop="name" content="World of Dragons">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/2020/06/07/%E8%87%B4%E4%B8%83%E7%8F%AD%E5%90%8C%E5%AD%A6/" class="post-title-link" itemprop="url">致七班同学</a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/2020/06/07/%E8%87%B4%E4%B8%83%E7%8F%AD%E5%90%8C%E5%AD%A6/" class="post-title-link" itemprop="url">致七班同学</a>
+        </h2>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2020-06-07 22:20:26" itemprop="dateCreated datePublished" datetime="2020-06-07T22:20:26+08:00">2020-06-07</time>
             </span>
-          
-
-          
-            
-
-            
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2020-07-12 23:42:14" itemprop="dateModified" datetime="2020-07-12T23:42:14+08:00">2020-07-12</time>
               </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br/>
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1254,12 +660,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h2 id="Part-1"><a href="#Part-1" class="headerlink" title="Part 1"></a>Part 1</h2><p>日期：2019年9月某日</p>
+          <h2 id="Part-1"><a href="#Part-1" class="headerlink" title="Part 1"></a>Part 1</h2><p>日期：2019年9月某日</p>
 <p>尊敬的同学，亲爱的老师们：</p>
 <p>​    鉴于我的合作伙伴——ljq——每周需要8*25小时的睡眠以保证上课的精神状态，我只能独自完成这篇<del>搞笑</del>严肃的<del>律师函</del>演讲稿。</p>
 <p>​    在大家观赏本作时我大约不在<del>世</del>场，因此我无法对大家致以我最诚挚的问候，希望大家能原谅这个弥天大谎。同时我也点个名：没到的同学请举手！麻烦戴老师替我看一下谁举了手，到时候罚他请全班每人一瓶凉白开。</p>
@@ -1545,148 +946,62 @@
 <p>​    2.中华人民共和国是工人阶级领导的、以工农联盟为基础的人民民主专政的社会主义国家。人大作为反映人民意志的权力机关，为何允许资本家这种工人阶级之敌参加？再者，工农联盟在哪？我只看到遍地富裕的资本家和贫困的工农人民。</p>
 <hr>
 
-          
-        
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
       
-
-  
-
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/ArkhalisDragon/ArkhalisDragon.github.io.git/2019/08/10/%E9%9A%8F%E7%AC%94%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/2019/08/10/%E9%9A%8F%E7%AC%94%EF%BC%88%E4%B8%80%EF%BC%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Arkhalis Dragon"/>
-      <meta itemprop="description" content="不要活在期望中。"/>
-      <meta itemprop="image" content="/ArkhalisDragon/ArkhalisDragon.github.io.git/images/avatar.gif"/>
+      <meta itemprop="image" content="https://i.loli.net/2020/12/27/nRLoGE6vAXtHgsf.png">
+      <meta itemprop="name" content="Arkhalis Dragon">
+      <meta itemprop="description" content="不要活在期望中。">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="World of Dragons"/>
+      <meta itemprop="name" content="World of Dragons">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/2019/08/10/%E9%9A%8F%E7%AC%94%EF%BC%88%E4%B8%80%EF%BC%89/" class="post-title-link" itemprop="url">随笔（一）</a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/2019/08/10/%E9%9A%8F%E7%AC%94%EF%BC%88%E4%B8%80%EF%BC%89/" class="post-title-link" itemprop="url">随笔（一）</a>
+        </h2>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2019-08-10 19:11:55" itemprop="dateCreated datePublished" datetime="2019-08-10T19:11:55+08:00">2019-08-10</time>
             </span>
-          
-
-          
-            
-
-            
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-12-21 19:32:40" itemprop="dateModified" datetime="2019-12-21T19:32:40+08:00">2019-12-21</time>
               </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br/>
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1694,12 +1009,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <p>随笔，会不定期更新/补充，记录一些生活中的小事和偶然想到的一些<del>奇奇怪怪的</del>东西。</p>
+          <p>随笔，会不定期更新/补充，记录一些生活中的小事和偶然想到的一些<del>奇奇怪怪的</del>东西。</p>
 <h1 id="一，“条件和奖励”"><a href="#一，“条件和奖励”" class="headerlink" title="一，“条件和奖励”"></a>一，“条件和奖励”</h1><p>​    又跟家长吵架。</p>
 <p>​    我妈说：你认认真真完成一件事情，别人给你奖励，跟你为了奖励才去做那件事情，这两个是不是有很大的区别？</p>
 <p>​    我：那请你想想，假设这件事是A，奖励是B，那“想得到奖励B就必须完成A”和“完成A可以得到奖励B”这两个有什么本质上的区别？你一直说这两个有区别，请不要转移话题，你来说说这两种“说法”有何区别？</p>
@@ -1737,138 +1047,56 @@
 <p>本文全部内容为纯原创，如有转载会注明出处，如有雷同且未注明转载出处者，纯属巧合。</p>
 <p>转载请注明出处，且务必加上原文链接。</p>
 
-          
-        
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
       
-
-  
-
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/ArkhalisDragon/ArkhalisDragon.github.io.git/2019/07/07/%E3%80%8C%E6%96%87%E7%AB%A0%E8%BD%AC%E8%BD%BD%E3%80%8D%E6%97%B6%E4%BB%A3%E7%9A%84%E6%82%B2%E5%93%80/"/>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/2019/07/07/%E3%80%8C%E6%96%87%E7%AB%A0%E8%BD%AC%E8%BD%BD%E3%80%8D%E6%97%B6%E4%BB%A3%E7%9A%84%E6%82%B2%E5%93%80/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Arkhalis Dragon"/>
-      <meta itemprop="description" content="不要活在期望中。"/>
-      <meta itemprop="image" content="/ArkhalisDragon/ArkhalisDragon.github.io.git/images/avatar.gif"/>
+      <meta itemprop="image" content="https://i.loli.net/2020/12/27/nRLoGE6vAXtHgsf.png">
+      <meta itemprop="name" content="Arkhalis Dragon">
+      <meta itemprop="description" content="不要活在期望中。">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="World of Dragons"/>
+      <meta itemprop="name" content="World of Dragons">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/2019/07/07/%E3%80%8C%E6%96%87%E7%AB%A0%E8%BD%AC%E8%BD%BD%E3%80%8D%E6%97%B6%E4%BB%A3%E7%9A%84%E6%82%B2%E5%93%80/" class="post-title-link" itemprop="url">「文章转载」时代的悲哀</a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/2019/07/07/%E3%80%8C%E6%96%87%E7%AB%A0%E8%BD%AC%E8%BD%BD%E3%80%8D%E6%97%B6%E4%BB%A3%E7%9A%84%E6%82%B2%E5%93%80/" class="post-title-link" itemprop="url">「文章转载」时代的悲哀</a>
+        </h2>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
+              <span class="post-meta-item-text">发表于</span>
               
 
               <time title="创建时间：2019-07-07 11:05:05 / 修改时间：11:12:26" itemprop="dateCreated datePublished" datetime="2019-07-07T11:05:05+08:00">2019-07-07</time>
             </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br/>
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1876,12 +1104,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <p>  周六晚，影响中国2018年度物颁奖典礼在国宾馆举行。杨超越获“影响中国年度演艺人物”奖项，人们不禁感慨：</p>
+          <p>  周六晚，影响中国2018年度物颁奖典礼在国宾馆举行。杨超越获“影响中国年度演艺人物”奖项，人们不禁感慨：</p>
 <p>  真是一个敢给，一个敢接，杨超越怎么影响中国了？</p>
 <p>  在微博热评中，有这样一句评论发人深省：“从这个人身上看到只要长得好看，就可以不劳而获。”</p>
 <p>  “影响中国”这四个字何其之重？</p>
@@ -1971,138 +1194,56 @@
 <hr>
 <p>本文转载自 <a target="_blank" rel="noopener" href="https://keepthethink.github.io/">Heliumの博客</a></p>
 
-          
-        
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
       
-
-  
-
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/ArkhalisDragon/ArkhalisDragon.github.io.git/2019/06/06/stdafx%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8C%97/"/>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/2019/06/06/stdafx%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8C%97/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Arkhalis Dragon"/>
-      <meta itemprop="description" content="不要活在期望中。"/>
-      <meta itemprop="image" content="/ArkhalisDragon/ArkhalisDragon.github.io.git/images/avatar.gif"/>
+      <meta itemprop="image" content="https://i.loli.net/2020/12/27/nRLoGE6vAXtHgsf.png">
+      <meta itemprop="name" content="Arkhalis Dragon">
+      <meta itemprop="description" content="不要活在期望中。">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="World of Dragons"/>
+      <meta itemprop="name" content="World of Dragons">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/2019/06/06/stdafx%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8C%97/" class="post-title-link" itemprop="url">stdafx食用指北</a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/2019/06/06/stdafx%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8C%97/" class="post-title-link" itemprop="url">stdafx食用指北</a>
+        </h2>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
+              <span class="post-meta-item-text">发表于</span>
               
 
               <time title="创建时间：2019-06-06 08:09:08 / 修改时间：08:23:09" itemprop="dateCreated datePublished" datetime="2019-06-06T08:09:08+08:00">2019-06-06</time>
             </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br/>
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -2110,12 +1251,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <p>注意：本篇内容仅针对Windows7，Dev-C++！！！</p>
+          <p>注意：本篇内容仅针对Windows7，Dev-C++！！！</p>
 <p><del>因为Mac OS和Linux都没用过</del></p>
 <h3 id="1-文件位置"><a href="#1-文件位置" class="headerlink" title="1.文件位置"></a>1.文件位置</h3><p>stdafx文件不能有后缀！文件图标必须是一片空白！不能有内容！</p>
 <p>stdafx.h只能有.h后缀！</p>
@@ -2225,148 +1361,62 @@
 <p>注：template用法：</p>
 <p>所有有加template的函数，可以传入大部分的C++原有类型（除非有注明特别适用于某种类型），用法和普通函数并无区别。</p>
 
-          
-        
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
       
-
-  
-
   
   
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/ArkhalisDragon/ArkhalisDragon.github.io.git/2019/06/06/stdafx-h/"/>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/2019/06/06/stdafx-h/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Arkhalis Dragon"/>
-      <meta itemprop="description" content="不要活在期望中。"/>
-      <meta itemprop="image" content="/ArkhalisDragon/ArkhalisDragon.github.io.git/images/avatar.gif"/>
+      <meta itemprop="image" content="https://i.loli.net/2020/12/27/nRLoGE6vAXtHgsf.png">
+      <meta itemprop="name" content="Arkhalis Dragon">
+      <meta itemprop="description" content="不要活在期望中。">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="World of Dragons"/>
+      <meta itemprop="name" content="World of Dragons">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/2019/06/06/stdafx-h/" class="post-title-link" itemprop="url">stdafx.h</a>
-              
-            
-          </h1>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/2019/06/06/stdafx-h/" class="post-title-link" itemprop="url">stdafx.h</a>
+        </h2>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
+              <span class="post-meta-item-text">发表于</span>
 
               <time title="创建时间：2019-06-06 08:07:16" itemprop="dateCreated datePublished" datetime="2019-06-06T08:07:16+08:00">2019-06-06</time>
             </span>
-          
-
-          
-            
-
-            
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
+                <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-06-08 19:00:36" itemprop="dateModified" datetime="2019-06-08T19:00:36+08:00">2019-06-08</time>
               </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br/>
-          
-
-          
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -2374,12 +1424,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h2 id="新版更新通知"><a href="#新版更新通知" class="headerlink" title="新版更新通知:"></a>新版更新通知:</h2><p>现版本将可以直接stdafx,不必再加.h后缀,例如:</p>
+          <h2 id="新版更新通知"><a href="#新版更新通知" class="headerlink" title="新版更新通知:"></a>新版更新通知:</h2><p>现版本将可以直接stdafx,不必再加.h后缀,例如:</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdafx&gt;</span></span></span><br></pre></td></tr></table></figure>
 
 <p>提醒:保存stdafx时请将.h后缀删掉!</p>
@@ -2405,225 +1450,141 @@
 <p>注意:传入的参数要同一类型!因没有传入同一类型参数所造成的所有后果,请自行承担!</p>
 <p>警告:请将本头文件用于正常用途!如果您由于非法使用本头文件而所造成的所有后果,本人不承担任何责任!</p>
 
-          
-        
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
-  </section>
 
   
+
 
 
           </div>
           
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">Arkhalis Dragon</p>
-              <div class="site-description motion-element" itemprop="description">不要活在期望中。</div>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/archives/%20%7C%7C%20archive">
-                
-                    <span class="site-state-item-count">10</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                      <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/tags/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">8</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
-
-          
-
-          
-
-          
-
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
-      </div>
-
-      
-
-      
-
-    </div>
-  </aside>
-  
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Arkhalis Dragon</span>
-
-  
-
-  
-</div>
-
-
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v5.4.0</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.2.0</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-    
-
-    
-  </div>
-
-  
 
 <script>
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
   }
 </script>
 
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Arkhalis Dragon"
+      src="https://i.loli.net/2020/12/27/nRLoGE6vAXtHgsf.png">
+  <p class="site-author-name" itemprop="name">Arkhalis Dragon</p>
+  <div class="site-description" itemprop="description">不要活在期望中。</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/archives/">
+        
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/tags/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://www.luogu.org/space/show?uid=133720" title="洛谷 → https:&#x2F;&#x2F;www.luogu.org&#x2F;space&#x2F;show?uid&#x3D;133720" rel="noopener" target="_blank">洛谷</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/ArkhalisDragon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;ArkhalisDragon">GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://masteroj.hustoj.com/userinfo.php?user=Sopa" title="MasterOJ → http:&#x2F;&#x2F;masteroj.hustoj.com&#x2F;userinfo.php?user&#x3D;Sopa" rel="noopener" target="_blank">MasterOJ</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="battery-full"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Arkhalis Dragon</span>
+</div>
+
+        
 
 
 
@@ -2632,9 +1593,37 @@
 
 
 
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/ArkhalisDragon/ArkhalisDragon.github.io.git/lib/anime.min.js"></script>
+  <script src="/ArkhalisDragon/ArkhalisDragon.github.io.git/lib/velocity/velocity.min.js"></script>
+  <script src="/ArkhalisDragon/ArkhalisDragon.github.io.git/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/ArkhalisDragon/ArkhalisDragon.github.io.git/js/utils.js"></script>
+
+<script src="/ArkhalisDragon/ArkhalisDragon.github.io.git/js/motion.js"></script>
+
+
+<script src="/ArkhalisDragon/ArkhalisDragon.github.io.git/js/schemes/pisces.js"></script>
+
+
+<script src="/ArkhalisDragon/ArkhalisDragon.github.io.git/js/next-boot.js"></script>
 
 
 
+
+  
+
+
+
+
+  
+<script src="//cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+<script src="//cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js"></script>
+<script src="/ArkhalisDragon/ArkhalisDragon.github.io.git/js/algolia-search.js"></script>
 
 
 
@@ -2650,82 +1639,74 @@
 
 
   
-  <script src="/ArkhalisDragon/ArkhalisDragon.github.io.git/lib/jquery/index.js?v=3.4.1"></script>
 
   
-  <script src="/ArkhalisDragon/ArkhalisDragon.github.io.git/lib/velocity/velocity.min.js?v=1.2.1"></script>
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
-  <script src="/ArkhalisDragon/ArkhalisDragon.github.io.git/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  <script src="//cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js"></script>
+  <script>
+      window.addEventListener('load', () => {
+      quicklink({
+        timeout : 3000,
+        priority: true,
+        ignores : [uri => uri.includes('#'),uri => uri === 'https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/',]
+      });
+      });
+  </script>
 
-
-  
-
-
-  <script src="/ArkhalisDragon/ArkhalisDragon.github.io.git/js/utils.js?v=7.2.0"></script>
-
-  <script src="/ArkhalisDragon/ArkhalisDragon.github.io.git/js/motion.js?v=7.2.0"></script>
-
-
-
-  
-  
-
-
-  <script src="/ArkhalisDragon/ArkhalisDragon.github.io.git/js/schemes/muse.js?v=7.2.0"></script>
-
-
-
-  
-
-  
-
-
-  <script src="/ArkhalisDragon/ArkhalisDragon.github.io.git/js/next-boot.js?v=7.2.0"></script>
-
-
-  
-
-  
-
-  
-
-  
-
-
-
-  
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>
