@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/ArkhalisDragon/ArkhalisDragon.github.io.git/lib/font-awesome/css/font-awesome.min.css?v=4.7.0"/>
+
+<link rel="stylesheet" href="/ArkhalisDragon/ArkhalisDragon.github.io.git/css/main.css?v=7.2.0"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/ArkhalisDragon/ArkhalisDragon.github.io.git/images/apple-touch-icon-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/ArkhalisDragon/ArkhalisDragon.github.io.git/images/favicon-32x32-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/ArkhalisDragon/ArkhalisDragon.github.io.git/images/favicon-16x16-next.png?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/ArkhalisDragon/ArkhalisDragon.github.io.git/images/logo.svg?v=7.2.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="新版更新通知:现版本将可以直接stdafx,不必再加.h后缀,例如: 1#include&lt;stdafx&gt;  提醒:保存stdafx时请将.h后缀删掉! 也就是说,没有.h后缀的文件是显示不出来文件类型的. stdafx及stdafx.h食用方法 文件有两个：以下是stdafx文件内容：1234567#ifndef _GLIBCXX_STDAFX#define _GLIBCXX_STDA">
+<meta property="og:type" content="article">
+<meta property="og:title" content="stdafx.h">
+<meta property="og:url" content="https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/2019/06/06/stdafx-h/index.html">
+<meta property="og:site_name" content="World of Dragons">
+<meta property="og:description" content="新版更新通知:现版本将可以直接stdafx,不必再加.h后缀,例如: 1#include&lt;stdafx&gt;  提醒:保存stdafx时请将.h后缀删掉! 也就是说,没有.h后缀的文件是显示不出来文件类型的. stdafx及stdafx.h食用方法 文件有两个：以下是stdafx文件内容：1234567#ifndef _GLIBCXX_STDAFX#define _GLIBCXX_STDA">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-06-06T00:07:16.000Z">
+<meta property="article:modified_time" content="2019-06-08T11:00:36.263Z">
+<meta property="article:author" content="Arkhalis Dragon">
+<meta property="article:tag" content="stdafx">
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/2019/06/06/stdafx-h/"/>
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>stdafx.h | World of Dragons</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">World of Dragons</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-home&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/archives/" rel="section">&lt;i class&#x3D;&quot;menu-item-icon fa fa-fw fa-archive&quot;&gt;&lt;&#x2F;i&gt; &lt;br&#x2F;&gt;归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/ArkhalisDragon/ArkhalisDragon.github.io.git/ArkhalisDragon/ArkhalisDragon.github.io.git/2019/06/06/stdafx-h/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Arkhalis Dragon"/>
+      <meta itemprop="description" content="不要活在期望中。"/>
+      <meta itemprop="image" content="/ArkhalisDragon/ArkhalisDragon.github.io.git/images/avatar.gif"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="World of Dragons"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">stdafx.h
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-06 08:07:16" itemprop="dateCreated datePublished" datetime="2019-06-06T08:07:16+08:00">2019-06-06</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-08 19:00:36" itemprop="dateModified" datetime="2019-06-08T19:00:36+08:00">2019-06-08</time>
+              </span>
+            
+          
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br/>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="新版更新通知"><a href="#新版更新通知" class="headerlink" title="新版更新通知:"></a>新版更新通知:</h2><p>现版本将可以直接stdafx,不必再加.h后缀,例如:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdafx&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>提醒:保存stdafx时请将.h后缀删掉!</p>
+<p>也就是说,没有.h后缀的文件是显示不出来文件类型的.</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.org/blog/133720/stdafx-yu-stdafxh-si-yong-fang-fa">stdafx及stdafx.h食用方法</a></p>
+<h1 id="文件有两个："><a href="#文件有两个：" class="headerlink" title="文件有两个："></a>文件有两个：</h1><h2 id="以下是stdafx文件内容："><a href="#以下是stdafx文件内容：" class="headerlink" title="以下是stdafx文件内容："></a>以下是stdafx文件内容：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> _GLIBCXX_STDAFX</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _GLIBCXX_STDAFX 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> GCC system_header</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdafx.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="以下是stdafx-h文件内容："><a href="#以下是stdafx-h文件内容：" class="headerlink" title="以下是stdafx.h文件内容："></a>以下是stdafx.h文件内容：</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br><span class="line">404</span><br><span class="line">405</span><br><span class="line">406</span><br><span class="line">407</span><br><span class="line">408</span><br><span class="line">409</span><br><span class="line">410</span><br><span class="line">411</span><br><span class="line">412</span><br><span class="line">413</span><br><span class="line">414</span><br><span class="line">415</span><br><span class="line">416</span><br><span class="line">417</span><br><span class="line">418</span><br><span class="line">419</span><br><span class="line">420</span><br><span class="line">421</span><br><span class="line">422</span><br><span class="line">423</span><br><span class="line">424</span><br><span class="line">425</span><br><span class="line">426</span><br><span class="line">427</span><br><span class="line">428</span><br><span class="line">429</span><br><span class="line">430</span><br><span class="line">431</span><br><span class="line">432</span><br><span class="line">433</span><br><span class="line">434</span><br><span class="line">435</span><br><span class="line">436</span><br><span class="line">437</span><br><span class="line">438</span><br><span class="line">439</span><br><span class="line">440</span><br><span class="line">441</span><br><span class="line">442</span><br><span class="line">443</span><br><span class="line">444</span><br><span class="line">445</span><br><span class="line">446</span><br><span class="line">447</span><br><span class="line">448</span><br><span class="line">449</span><br><span class="line">450</span><br><span class="line">451</span><br><span class="line">452</span><br><span class="line">453</span><br><span class="line">454</span><br><span class="line">455</span><br><span class="line">456</span><br><span class="line">457</span><br><span class="line">458</span><br><span class="line">459</span><br><span class="line">460</span><br><span class="line">461</span><br><span class="line">462</span><br><span class="line">463</span><br><span class="line">464</span><br><span class="line">465</span><br><span class="line">466</span><br><span class="line">467</span><br><span class="line">468</span><br><span class="line">469</span><br><span class="line">470</span><br><span class="line">471</span><br><span class="line">472</span><br><span class="line">473</span><br><span class="line">474</span><br><span class="line">475</span><br><span class="line">476</span><br><span class="line">477</span><br><span class="line">478</span><br><span class="line">479</span><br><span class="line">480</span><br><span class="line">481</span><br><span class="line">482</span><br><span class="line">483</span><br><span class="line">484</span><br><span class="line">485</span><br><span class="line">486</span><br><span class="line">487</span><br><span class="line">488</span><br><span class="line">489</span><br><span class="line">490</span><br><span class="line">491</span><br><span class="line">492</span><br><span class="line">493</span><br><span class="line">494</span><br><span class="line">495</span><br><span class="line">496</span><br><span class="line">497</span><br><span class="line">498</span><br><span class="line">499</span><br><span class="line">500</span><br><span class="line">501</span><br><span class="line">502</span><br><span class="line">503</span><br><span class="line">504</span><br><span class="line">505</span><br><span class="line">506</span><br><span class="line">507</span><br><span class="line">508</span><br><span class="line">509</span><br><span class="line">510</span><br><span class="line">511</span><br><span class="line">512</span><br><span class="line">513</span><br><span class="line">514</span><br><span class="line">515</span><br><span class="line">516</span><br><span class="line">517</span><br><span class="line">518</span><br><span class="line">519</span><br><span class="line">520</span><br><span class="line">521</span><br><span class="line">522</span><br><span class="line">523</span><br><span class="line">524</span><br><span class="line">525</span><br><span class="line">526</span><br><span class="line">527</span><br><span class="line">528</span><br><span class="line">529</span><br><span class="line">530</span><br><span class="line">531</span><br><span class="line">532</span><br><span class="line">533</span><br><span class="line">534</span><br><span class="line">535</span><br><span class="line">536</span><br><span class="line">537</span><br><span class="line">538</span><br><span class="line">539</span><br><span class="line">540</span><br><span class="line">541</span><br><span class="line">542</span><br><span class="line">543</span><br><span class="line">544</span><br><span class="line">545</span><br><span class="line">546</span><br><span class="line">547</span><br><span class="line">548</span><br><span class="line">549</span><br><span class="line">550</span><br><span class="line">551</span><br><span class="line">552</span><br><span class="line">553</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> stdafx</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> stdafx 1</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LL long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> UI unsigned int</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> UL unsigned long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ULL unsigned long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> UF unsigned float</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> UD unsigned DOUBLE</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> push(x) push_back(x)</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">namespace</span> <span class="built_in">std</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="class"><span class="keyword">class</span> <span class="title">INT</span></span></span><br><span class="line"><span class="class">	&#123;</span></span><br><span class="line">		<span class="keyword">protected</span>:</span><br><span class="line">			<span class="built_in">vector</span> &lt;<span class="keyword">short</span>&gt; que;</span><br><span class="line">			<span class="keyword">bool</span> flag;</span><br><span class="line">			<span class="function">UI <span class="title">size</span><span class="params">()</span><span class="keyword">const</span></span></span><br><span class="line"><span class="function">			</span>&#123;</span><br><span class="line">				<span class="keyword">return</span> que.size();</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="function"><span class="keyword">void</span> <span class="title">count</span><span class="params">()</span></span></span><br><span class="line"><span class="function">			</span>&#123;</span><br><span class="line">				<span class="keyword">while</span>(que.size()&gt;<span class="number">1</span>&amp;&amp;!que[que.size()<span class="number">-1</span>])</span><br><span class="line">					que.pop_back();</span><br><span class="line">			&#125;</span><br><span class="line">		<span class="keyword">public</span>:</span><br><span class="line">			INT()</span><br><span class="line">			&#123;</span><br><span class="line">				que.clear();</span><br><span class="line">				que.push_back(<span class="number">0</span>);</span><br><span class="line">				flag=<span class="number">1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			INT(<span class="keyword">const</span> <span class="keyword">char</span> *num)</span><br><span class="line">			&#123;</span><br><span class="line">				*<span class="keyword">this</span>=num;</span><br><span class="line">			&#125;</span><br><span class="line">			INT(<span class="keyword">const</span> <span class="keyword">int</span> &amp;num)</span><br><span class="line">			&#123;</span><br><span class="line">				*<span class="keyword">this</span>=num;</span><br><span class="line">			&#125;</span><br><span class="line">			INT(<span class="keyword">const</span> <span class="keyword">long</span> <span class="keyword">long</span> &amp;num)</span><br><span class="line">			&#123;</span><br><span class="line">				*<span class="keyword">this</span>=num;</span><br><span class="line">			&#125;</span><br><span class="line">			INT <span class="keyword">operator</span>=(<span class="keyword">const</span> INT &amp;num)</span><br><span class="line">			&#123;</span><br><span class="line">				que=num.que;</span><br><span class="line">				flag=num.flag;</span><br><span class="line">				<span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			INT <span class="keyword">operator</span>=(<span class="keyword">const</span> <span class="built_in">string</span> &amp;num)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">int</span> i=(num[<span class="number">0</span>]==<span class="string">&#x27;-&#x27;</span>);</span><br><span class="line">				que.clear();</span><br><span class="line">				flag=!i;</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> now=num.size()<span class="number">-1</span>; now&gt;=i; now--)</span><br><span class="line">					que.push(num[now]-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">				<span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			INT <span class="keyword">operator</span>=(<span class="keyword">const</span> <span class="keyword">char</span> *num)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">int</span> i=(num[<span class="number">0</span>]==<span class="string">&#x27;-&#x27;</span>);</span><br><span class="line">				que.clear();</span><br><span class="line">				flag=!i;</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> now=<span class="built_in">strlen</span>(num)<span class="number">-1</span>; now&gt;=i; now--)</span><br><span class="line">					que.push(num[now]-<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">				<span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			INT <span class="keyword">operator</span>=(<span class="keyword">const</span> <span class="keyword">int</span> &amp;num)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">int</span> tmp=num;</span><br><span class="line">				tmp&lt;<span class="number">0</span>?flag=<span class="number">0</span>,tmp=-tmp:flag=<span class="number">1</span>;</span><br><span class="line">				que.clear();</span><br><span class="line">				<span class="keyword">if</span>(tmp==<span class="number">0</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					que.push(<span class="number">0</span>);</span><br><span class="line">					<span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">while</span>(tmp)</span><br><span class="line">					que.push(tmp%<span class="number">10</span>),tmp/=<span class="number">10</span>;</span><br><span class="line">				<span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			INT <span class="keyword">operator</span>=(<span class="keyword">const</span> LL &amp;num)</span><br><span class="line">			&#123;</span><br><span class="line">				LL tmp=num;</span><br><span class="line">				tmp&lt;<span class="number">0</span>?flag=<span class="number">0</span>,tmp=-tmp:flag=<span class="number">1</span>;</span><br><span class="line">				que.clear();</span><br><span class="line">				<span class="keyword">if</span>(tmp==<span class="number">0</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					que.push(<span class="number">0</span>);</span><br><span class="line">					<span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">while</span>(tmp)</span><br><span class="line">					que.push(tmp%<span class="number">10</span>),tmp/=<span class="number">10</span>;</span><br><span class="line">				<span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			INT <span class="keyword">operator</span>+(<span class="keyword">const</span> INT &amp;num)<span class="keyword">const</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span>(flag^num.flag)</span><br><span class="line">				&#123;</span><br><span class="line">					INT tmp=flag?num:*<span class="keyword">this</span>;</span><br><span class="line">					tmp.flag=<span class="number">1</span>;</span><br><span class="line">					<span class="keyword">return</span> flag?*<span class="keyword">this</span>-tmp:num-tmp;</span><br><span class="line">				&#125;</span><br><span class="line">				INT res;</span><br><span class="line">				res.que.resize(max(size(),num.size())+<span class="number">1</span>);</span><br><span class="line">				<span class="keyword">for</span>(UI i=<span class="number">0</span>,temp=<span class="number">0</span>; temp||i&lt;(max(size(),num.size())); i++)</span><br><span class="line">				&#123;</span><br><span class="line">					res.que[i]+=que[i]+num.que[i];</span><br><span class="line">					res.que[i+<span class="number">1</span>]+=res.que[i]/<span class="number">10</span>;</span><br><span class="line">					res.que[i]%=<span class="number">10</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				res.count();</span><br><span class="line">				res.flag=flag;</span><br><span class="line">				<span class="keyword">return</span> res;</span><br><span class="line">			&#125;</span><br><span class="line">			INT <span class="keyword">operator</span>-(<span class="keyword">const</span> INT &amp;num)<span class="keyword">const</span></span><br><span class="line">			&#123;</span><br><span class="line">				INT res;</span><br><span class="line">				<span class="keyword">if</span>(flag)</span><br><span class="line">					<span class="keyword">if</span>(num.flag)</span><br><span class="line">					&#123;</span><br><span class="line">						<span class="keyword">if</span>(*<span class="keyword">this</span>&lt;num)</span><br><span class="line">						&#123;</span><br><span class="line">							res=-(num-*<span class="keyword">this</span>);</span><br><span class="line">							<span class="keyword">return</span> res;</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">else</span></span><br><span class="line">					&#123;</span><br><span class="line">						res=*<span class="keyword">this</span>+(-num);</span><br><span class="line">						<span class="keyword">return</span> res;</span><br><span class="line">					&#125;</span><br><span class="line">				<span class="keyword">else</span></span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">if</span>(flag)</span><br><span class="line">						res=-((-*<span class="keyword">this</span>)+num);</span><br><span class="line">					<span class="keyword">else</span></span><br><span class="line">						res=-num-(-*<span class="keyword">this</span>);</span><br><span class="line">					<span class="keyword">return</span> res;</span><br><span class="line">				&#125;</span><br><span class="line">				res.que.resize(size()+<span class="number">2</span>);</span><br><span class="line">				<span class="keyword">for</span>(UI i=<span class="number">0</span>; i&lt;size(); i++)</span><br><span class="line">				&#123;</span><br><span class="line">					res.que[i]+=que[i]-num.que[i];</span><br><span class="line">					<span class="keyword">if</span>(res.que[i]&lt;<span class="number">0</span>)</span><br><span class="line">						res.que[i]+=<span class="number">10</span>,res.que[i+<span class="number">1</span>]--;</span><br><span class="line">				&#125;</span><br><span class="line">				res.count();</span><br><span class="line">				<span class="keyword">return</span> res;</span><br><span class="line">			&#125;</span><br><span class="line">			INT <span class="keyword">operator</span>*(<span class="keyword">const</span> INT &amp;num)<span class="keyword">const</span></span><br><span class="line">			&#123;</span><br><span class="line">				INT res;</span><br><span class="line">				res.que.resize(size()+num.size()+<span class="number">2</span>);</span><br><span class="line">				<span class="keyword">for</span>(UI i=<span class="number">0</span>; i&lt;size(); i++)</span><br><span class="line">					<span class="keyword">for</span>(UI j=<span class="number">0</span>; j&lt;num.que.size(); j++)</span><br><span class="line">					&#123;</span><br><span class="line">						res.que[i+j]+=que[i]*num.que[j];</span><br><span class="line">						res.que[i+j+<span class="number">1</span>]+=res.que[i+j]/<span class="number">10</span>;</span><br><span class="line">						res.que[i+j]%=<span class="number">10</span>;</span><br><span class="line">					&#125;</span><br><span class="line">				res.count();</span><br><span class="line">				res.flag=(flag==num.flag);</span><br><span class="line">				<span class="keyword">return</span> res;</span><br><span class="line">			&#125;</span><br><span class="line">			INT <span class="keyword">operator</span>/(<span class="keyword">const</span> INT &amp;num)<span class="keyword">const</span></span><br><span class="line">			&#123;</span><br><span class="line">				INT now,res=*<span class="keyword">this</span>;</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> i=size()<span class="number">-1</span>; i&gt;=<span class="number">0</span>; i--)</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">int</span> j=<span class="number">0</span>;</span><br><span class="line">					now=now*<span class="number">10</span>+que[i];</span><br><span class="line">					<span class="keyword">for</span>(; j&lt;<span class="number">10</span>; j++)</span><br><span class="line">						<span class="keyword">if</span>(now&lt;num*(j+<span class="number">1</span>))</span><br><span class="line">							<span class="keyword">break</span>;</span><br><span class="line">					res.que[i]=j;</span><br><span class="line">					now=now-num*j;</span><br><span class="line">				&#125;</span><br><span class="line">				now.count();</span><br><span class="line">				res.flag=(flag==num.flag);</span><br><span class="line">				<span class="keyword">return</span> res;</span><br><span class="line">			&#125;</span><br><span class="line">			INT <span class="keyword">operator</span>%(<span class="keyword">const</span> INT &amp;num)<span class="keyword">const</span></span><br><span class="line">			&#123;</span><br><span class="line">				INT nowa=*<span class="keyword">this</span>,nowb=num;</span><br><span class="line">				nowa.flag=nowb.flag=<span class="number">1</span>;</span><br><span class="line">				INT res=nowa-nowa/nowb*nowb;</span><br><span class="line">				res.flag=flag==num.flag;</span><br><span class="line">				<span class="keyword">return</span> res;</span><br><span class="line">			&#125;</span><br><span class="line">			INT <span class="keyword">operator</span>-()<span class="keyword">const</span></span><br><span class="line">			&#123;</span><br><span class="line">				INT res=*<span class="keyword">this</span>;</span><br><span class="line">				res.flag^=flag;</span><br><span class="line">				<span class="keyword">return</span> res;</span><br><span class="line">			&#125;</span><br><span class="line">			INT <span class="keyword">operator</span>+=(<span class="keyword">const</span> INT &amp;num)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">return</span> *<span class="keyword">this</span>=*<span class="keyword">this</span>+num;</span><br><span class="line">			&#125;</span><br><span class="line">			INT <span class="keyword">operator</span>-=(<span class="keyword">const</span> INT &amp;num)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">return</span> *<span class="keyword">this</span>=*<span class="keyword">this</span>-num;</span><br><span class="line">			&#125;</span><br><span class="line">			INT <span class="keyword">operator</span>*=(<span class="keyword">const</span> INT&amp; num)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">return</span> *<span class="keyword">this</span>=*<span class="keyword">this</span>*num;</span><br><span class="line">			&#125;</span><br><span class="line">			INT <span class="keyword">operator</span>/=(<span class="keyword">const</span> INT&amp; num)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">return</span> *<span class="keyword">this</span>=*<span class="keyword">this</span>/num;</span><br><span class="line">			&#125;</span><br><span class="line">			INT <span class="keyword">operator</span>++()</span><br><span class="line">			&#123;</span><br><span class="line">				*<span class="keyword">this</span>=*<span class="keyword">this</span>+<span class="number">1</span>;</span><br><span class="line">				<span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			INT <span class="keyword">operator</span>++(<span class="keyword">int</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				INT old=*<span class="keyword">this</span>;</span><br><span class="line">				++(*<span class="keyword">this</span>);</span><br><span class="line">				<span class="keyword">return</span> old;</span><br><span class="line">			&#125;</span><br><span class="line">			INT <span class="keyword">operator</span>--()</span><br><span class="line">			&#123;</span><br><span class="line">				*<span class="keyword">this</span>=*<span class="keyword">this</span><span class="number">-1</span>;</span><br><span class="line">				<span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			INT <span class="keyword">operator</span>--(<span class="keyword">int</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				INT old=*<span class="keyword">this</span>;</span><br><span class="line">				--(*<span class="keyword">this</span>);</span><br><span class="line">				<span class="keyword">return</span> old;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">bool</span> <span class="keyword">operator</span>&lt;(<span class="keyword">const</span> INT &amp;num)<span class="keyword">const</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span>(flag^num.flag)</span><br><span class="line">					<span class="keyword">return</span> num.flag;</span><br><span class="line">				<span class="keyword">if</span>(size()!=num.size())</span><br><span class="line">					<span class="keyword">return</span> flag?size()&lt;num.size():size()&gt;num.size();</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> i=que.size()<span class="number">-1</span>; i&gt;=<span class="number">0</span>; i--)</span><br><span class="line">					<span class="keyword">if</span>(que[i]!=num.que[i])</span><br><span class="line">						<span class="keyword">return</span> flag?que[i]&lt;num.que[i]:que[i]&gt;num.que[i];</span><br><span class="line">				<span class="keyword">return</span> !flag;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">bool</span> <span class="keyword">operator</span>&lt;=(<span class="keyword">const</span> INT &amp;num)<span class="keyword">const</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">return</span> !(*<span class="keyword">this</span>&gt;num);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">bool</span> <span class="keyword">operator</span>&gt;(<span class="keyword">const</span> INT &amp;num)<span class="keyword">const</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">return</span> num&lt;*<span class="keyword">this</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">bool</span> <span class="keyword">operator</span>&gt;=(<span class="keyword">const</span> INT &amp;num)<span class="keyword">const</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">return</span> !(*<span class="keyword">this</span>&lt;num);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">bool</span> <span class="keyword">operator</span>==(<span class="keyword">const</span> INT &amp;num)<span class="keyword">const</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">return</span> !(num!=*<span class="keyword">this</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">bool</span> <span class="keyword">operator</span>!=(<span class="keyword">const</span> INT &amp;num)<span class="keyword">const</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">return</span> *<span class="keyword">this</span>&gt;num||*<span class="keyword">this</span>&lt;num;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">bool</span> <span class="keyword">operator</span>!()<span class="keyword">const</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">return</span> *<span class="keyword">this</span>&gt;<span class="number">0</span>?<span class="number">1</span>:<span class="number">0</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="function"><span class="built_in">string</span> <span class="title">str</span><span class="params">()</span><span class="keyword">const</span></span></span><br><span class="line"><span class="function">			</span>&#123;</span><br><span class="line">				<span class="keyword">char</span> ch;</span><br><span class="line">				<span class="built_in">string</span> res;</span><br><span class="line">				<span class="keyword">for</span>(UI i=<span class="number">0</span>; i&lt;size(); i++)</span><br><span class="line">					ch=(<span class="keyword">char</span>)que[i]+<span class="string">&#x27;0&#x27;</span>,res=ch+res;</span><br><span class="line">				<span class="keyword">if</span>(res==<span class="string">&quot;&quot;</span>)</span><br><span class="line">					res=<span class="string">&quot;0&quot;</span>;</span><br><span class="line">				<span class="keyword">if</span>(!flag&amp;&amp;res!=<span class="string">&quot;0&quot;</span>)</span><br><span class="line">					res=<span class="string">&quot;-&quot;</span>+res;</span><br><span class="line">				<span class="keyword">return</span> res;</span><br><span class="line">			&#125;</span><br><span class="line">	&#125;;</span><br><span class="line">	istream&amp; <span class="keyword">operator</span>&gt;&gt;(istream &amp;in,INT &amp;now)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">string</span> ined;</span><br><span class="line">		in&gt;&gt;ined;</span><br><span class="line">		now=ined.c_str();</span><br><span class="line">		<span class="keyword">return</span> in;</span><br><span class="line">	&#125;</span><br><span class="line">	ostream&amp; <span class="keyword">operator</span>&lt;&lt;(ostream &amp;out,<span class="keyword">const</span> INT &amp;now)</span><br><span class="line">	&#123;</span><br><span class="line">		out&lt;&lt;now.str();</span><br><span class="line">		<span class="keyword">return</span> out;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function">INT <span class="title">gcd</span><span class="params">(INT x,INT y)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(x&lt;y)</span><br><span class="line">			<span class="keyword">return</span> gcd(y,x);</span><br><span class="line">		<span class="keyword">if</span>(y==<span class="number">0</span>)</span><br><span class="line">			<span class="keyword">return</span> x;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(!(x%<span class="number">2</span>))</span><br><span class="line">			<span class="keyword">if</span>(!(y%<span class="number">2</span>))</span><br><span class="line">				<span class="keyword">return</span> gcd(x/<span class="number">2</span>,y/<span class="number">2</span>)*<span class="number">2</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				<span class="keyword">return</span> gcd(x/<span class="number">2</span>,y);</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(!(y%<span class="number">2</span>))</span><br><span class="line">			<span class="keyword">return</span> gcd(x,y/<span class="number">2</span>);</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			<span class="keyword">return</span> gcd(y,x-y);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function">INT <span class="title">pow</span><span class="params">(INT base_num,INT exponent)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		INT res=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span>(!(!exponent))</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(exponent%<span class="number">2</span>==<span class="number">1</span>)</span><br><span class="line">				res*=base_num;</span><br><span class="line">			base_num*=base_num;</span><br><span class="line">			exponent/=<span class="number">2</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> res;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function">INT <span class="title">pow</span><span class="params">(INT base_num,INT exponent,INT mod)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		INT res=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span>(!(!exponent))</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(exponent%<span class="number">2</span>==<span class="number">1</span>)</span><br><span class="line">				res=res*base_num%mod;</span><br><span class="line">			base_num=base_num*base_num%mod;</span><br><span class="line">			exponent/=<span class="number">2</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> res;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function">INT <span class="title">sqrt</span><span class="params">(INT x)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(x&lt;<span class="number">0</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">		<span class="keyword">if</span>(x&lt;<span class="number">2</span>)</span><br><span class="line">			<span class="keyword">return</span> x;</span><br><span class="line">		INT l=<span class="number">0</span>,r=x,mid;</span><br><span class="line">		<span class="keyword">while</span>(r-l&gt;<span class="number">1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			mid=(l+r)/<span class="number">2</span>;</span><br><span class="line">			<span class="keyword">if</span>(mid*mid&gt;x)</span><br><span class="line">				r=mid;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				l=mid;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> l;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;<span class="function">T <span class="title">gcd</span><span class="params">(T x,T y)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(x&lt;y)</span><br><span class="line">			<span class="keyword">return</span> gcd(y,x);</span><br><span class="line">		<span class="keyword">if</span>(y==<span class="number">0</span>)</span><br><span class="line">			<span class="keyword">return</span> x;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(!(x&amp;<span class="number">1</span>))</span><br><span class="line">			<span class="keyword">if</span>(!(y&amp;<span class="number">1</span>))</span><br><span class="line">				<span class="keyword">return</span> <span class="number">2</span>*gcd(x&gt;&gt;<span class="number">1</span>,y&gt;&gt;<span class="number">1</span>);</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				<span class="keyword">return</span> gcd(x&gt;&gt;<span class="number">1</span>,y);</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(!(y&amp;<span class="number">1</span>))</span><br><span class="line">			<span class="keyword">return</span> gcd(x,y&gt;&gt;<span class="number">1</span>);</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			<span class="keyword">return</span> gcd(y,x-y);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;<span class="function">T <span class="title">lcm</span><span class="params">(T x,T y)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> x/gcd(x,y)*y;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;<span class="function">T <span class="title">pow</span><span class="params">(T base_num,T exponent)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		T res=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span>(exponent)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(exponent&amp;<span class="number">1</span>)</span><br><span class="line">				res*=base_num;</span><br><span class="line">			base_num*=base_num;</span><br><span class="line">			exponent&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> res;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;<span class="function">T <span class="title">pow</span><span class="params">(T base_num,T exponent,T mod)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		T res=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">while</span>(exponent)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(exponent&amp;<span class="number">1</span>)</span><br><span class="line">				res=res*base_num%mod;</span><br><span class="line">			base_num=base_num*base_num%mod;</span><br><span class="line">			exponent&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> res;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;<span class="function">T <span class="title">factorial</span><span class="params">(T x)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		T res=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span>(T i=<span class="number">1</span>; i&lt;=x; i++)</span><br><span class="line">			res*=i;</span><br><span class="line">		<span class="keyword">return</span> res;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;<span class="function">T <span class="title">lowbit</span><span class="params">(T x)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> x&amp;-x;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;<span class="function">T <span class="title">square</span><span class="params">(T x)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> x*x;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;<span class="function"><span class="keyword">double</span> <span class="title">distance</span><span class="params">(T x_1,T y_1,T x_2,T y_2)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="built_in">sqrt</span>(square(x_1-x_2)+square(y_1-y_2));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;<span class="function"><span class="keyword">int</span> <span class="title">sgn</span><span class="params">(T x,T y)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(x&gt;<span class="number">0</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(x==<span class="number">0</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">is_prime</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(n==<span class="number">2</span>||n==<span class="number">3</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">if</span>(n==<span class="number">1</span>||(n%<span class="number">6</span>!=<span class="number">1</span>&amp;&amp;n%<span class="number">6</span>!=<span class="number">5</span>))</span><br><span class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">5</span>; i*i&lt;=n; i+=<span class="number">6</span>)</span><br><span class="line">			<span class="keyword">if</span>(n%i==<span class="number">0</span>||n%(i+<span class="number">2</span>)==<span class="number">0</span>)</span><br><span class="line">				<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;<span class="function"><span class="keyword">void</span> <span class="title">make_prime_table</span><span class="params">(<span class="keyword">int</span> length,T f[])</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		fill(f,f+length,<span class="number">1</span>);</span><br><span class="line">		f[<span class="number">0</span>]=f[<span class="number">1</span>]=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> nowa=<span class="number">2</span>; nowa&lt;=length; nowa++)</span><br><span class="line">			<span class="keyword">if</span>(f[nowa]==<span class="number">1</span>)</span><br><span class="line">				<span class="keyword">for</span>(<span class="keyword">int</span> nowb=<span class="number">2</span>; nowb*nowa&lt;=length; nowb++)</span><br><span class="line">					f[nowa*nowb]=<span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">read</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> &amp;num)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		num=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">bool</span> flag=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">char</span> ch=getchar();</span><br><span class="line">		<span class="keyword">while</span>(ch&lt;<span class="string">&#x27;0&#x27;</span>||ch&gt;<span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">			flag|=(ch==<span class="string">&#x27;-&#x27;</span>),ch=getchar();</span><br><span class="line">		<span class="keyword">while</span>(ch&gt;=<span class="string">&#x27;0&#x27;</span>&amp;&amp;ch&lt;=<span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">			num=num*<span class="number">10</span>+ch<span class="number">-48</span>,ch=getchar();</span><br><span class="line">		num=flag?-num:num;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">void</span> <span class="title">read</span><span class="params">(<span class="keyword">double</span> &amp;num)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">int</span> w=<span class="number">0</span>,f=<span class="number">0</span>,flag=<span class="number">1</span>;</span><br><span class="line">		<span class="keyword">char</span> ch=getchar();</span><br><span class="line">		<span class="keyword">double</span> s=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span>(ch&lt;<span class="string">&#x27;0&#x27;</span>||ch&gt;<span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(ch==<span class="string">&#x27;-&#x27;</span>)</span><br><span class="line">				flag=<span class="number">-1</span>;</span><br><span class="line">			ch=getchar();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">while</span>((ch&gt;=<span class="string">&#x27;0&#x27;</span>&amp;&amp;ch&lt;=<span class="string">&#x27;9&#x27;</span>)||ch==<span class="string">&#x27;.&#x27;</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			ch==<span class="string">&#x27;.&#x27;</span>?f=<span class="number">1</span>:!f?s=s*<span class="number">10</span>+ch-<span class="string">&#x27;0&#x27;</span>:(w++,s+=(ch-<span class="string">&#x27;0&#x27;</span>)*<span class="number">1.0</span>/<span class="built_in">pow</span>&lt;<span class="keyword">int</span>&gt;(<span class="number">10</span>,w));</span><br><span class="line">			ch=getchar();</span><br><span class="line">		&#125;</span><br><span class="line">		num=s*flag;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;<span class="function"><span class="keyword">void</span> <span class="title">read</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r,T <span class="built_in">array</span>[])</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> now=l; now&lt;r; now++)</span><br><span class="line">			read(<span class="built_in">array</span>[now]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;<span class="function"><span class="keyword">void</span> <span class="title">write</span><span class="params">(T num)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(num&lt;<span class="number">0</span>)</span><br><span class="line">			<span class="built_in">putchar</span>(<span class="string">&#x27;-&#x27;</span>),num=-num;</span><br><span class="line">		<span class="keyword">if</span>(num&gt;<span class="number">9</span>)</span><br><span class="line">			write(num/<span class="number">10</span>);</span><br><span class="line">		<span class="built_in">putchar</span>(num%<span class="number">10</span>+<span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> pre[])</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">int</span> p=x,tmp;</span><br><span class="line">		<span class="keyword">while</span>(x!=pre[x])</span><br><span class="line">			x=pre[x];</span><br><span class="line">		<span class="keyword">while</span>(p!=x)</span><br><span class="line">			tmp=pre[x],pre[x]=x,p=tmp;</span><br><span class="line">		<span class="keyword">return</span> x;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">join</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> pre[])</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		<span class="keyword">int</span> fx=find(x,pre),fy=find(y,pre);</span><br><span class="line">		<span class="keyword">if</span>(fx!=fy)</span><br><span class="line">		&#123;</span><br><span class="line">			pre[fx]=fy;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function">LL <span class="title">make_rand</span><span class="params">(<span class="keyword">const</span> LL &amp;num,<span class="keyword">int</span> now,<span class="keyword">int</span> _max)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		now++;</span><br><span class="line">		<span class="keyword">if</span>(now==_max)</span><br><span class="line">			<span class="keyword">return</span> num;</span><br><span class="line">		<span class="keyword">int</span> i=rand()%<span class="number">5</span>;</span><br><span class="line">		<span class="keyword">if</span>(i==<span class="number">0</span>)</span><br><span class="line">			<span class="keyword">return</span> make_rand(num+rand(),now,_max);</span><br><span class="line">		<span class="keyword">if</span>(i==<span class="number">1</span>)</span><br><span class="line">			<span class="keyword">return</span> make_rand(num-rand(),now,_max);</span><br><span class="line">		<span class="keyword">if</span>(i==<span class="number">2</span>)</span><br><span class="line">			<span class="keyword">return</span> make_rand(num*rand(),now,_max);</span><br><span class="line">		<span class="keyword">if</span>(i==<span class="number">3</span>)</span><br><span class="line">			<span class="keyword">return</span> make_rand(num/rand(),now,_max);</span><br><span class="line">		<span class="keyword">if</span>(i==<span class="number">4</span>)</span><br><span class="line">			<span class="keyword">return</span> make_rand(-num,now,_max);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function">LL <span class="title">random</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		srand(rand()*time(<span class="number">0</span>));</span><br><span class="line">		<span class="keyword">int</span> now=rand()%<span class="number">1000</span>;</span><br><span class="line">		<span class="keyword">return</span> make_rand(rand(),<span class="number">1</span>,now);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function">LL <span class="title">random</span><span class="params">(LL mod)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		srand(rand()*time(<span class="number">0</span>));</span><br><span class="line">		<span class="keyword">int</span> now=rand()%<span class="number">1000</span>;</span><br><span class="line">		<span class="keyword">return</span> make_rand(rand(),<span class="number">1</span>,now)%mod;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function">ULL <span class="title">urandom</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		srand(rand()*time(<span class="number">0</span>));</span><br><span class="line">		<span class="keyword">int</span> now=rand()%<span class="number">1000</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="built_in">abs</span>(make_rand(rand(),<span class="number">1</span>,now));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function">ULL <span class="title">urandom</span><span class="params">(LL mod)</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		srand(rand()*time(<span class="number">0</span>));</span><br><span class="line">		<span class="keyword">int</span> now=rand()%<span class="number">1000</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="built_in">abs</span>(make_rand(rand(),<span class="number">1</span>,now)%mod);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="通知"><a href="#通知" class="headerlink" title="通知:"></a>通知:</h3><p>1.由于习惯,刚开始有一些函数会起自己常用的形参,后面会慢慢改正,尽量做到通俗易懂.</p>
+<p>2.有人可能不理解template<typename T>是什么意思,其实意思很简单,就是可以传更多类型的参数,像int,long long等等.可能有人不知道怎么用,举个例子:</p>
+<p>  比如说,一般的gcd函数,正常情况下是这么用的:</p>
+<pre><code>  gcd(a,b);
+</code></pre>
+<p>加了template的gcd是这样的:</p>
+<pre><code>  gcd&lt;int&gt;(a,b);(假设a,b是int类型)
+</code></pre>
+<p>同样的:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcd&lt;<span class="keyword">long</span> <span class="keyword">long</span>&gt;(a,b);</span><br></pre></td></tr></table></figure>
+
+<p>也是允许的.其实并没有多少差别,只是在传入参数的时候,前面要声明一下参数的类型罢了.</p>
+<p>但是在使用INT的各个函数时不需要加尖括号,因为有专门给INT使用的函数定义</p>
+<p>注意:传入的参数要同一类型!因没有传入同一类型参数所造成的所有后果,请自行承担!</p>
+<p>警告:请将本头文件用于正常用途!如果您由于非法使用本头文件而所造成的所有后果,本人不承担任何责任!</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/tags/stdafx/" rel="tag"># stdafx</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/2019/06/06/stdafx%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8C%97/" rel="prev" title="stdafx食用指北">
+                stdafx食用指北 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Arkhalis Dragon</p>
+              <div class="site-description motion-element" itemprop="description">不要活在期望中。</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/archives/%20%7C%7C%20archive">
+                
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/ArkhalisDragon/ArkhalisDragon.github.io.git/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B0%E7%89%88%E6%9B%B4%E6%96%B0%E9%80%9A%E7%9F%A5"><span class="nav-number">1.</span> <span class="nav-text">新版更新通知:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E6%9C%89%E4%B8%A4%E4%B8%AA%EF%BC%9A"><span class="nav-number"></span> <span class="nav-text">文件有两个：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A5%E4%B8%8B%E6%98%AFstdafx%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">以下是stdafx文件内容：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A5%E4%B8%8B%E6%98%AFstdafx-h%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">以下是stdafx.h文件内容：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%9A%E7%9F%A5"><span class="nav-number">2.1.</span> <span class="nav-text">通知:</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Arkhalis Dragon</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v5.4.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.2.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/ArkhalisDragon/ArkhalisDragon.github.io.git/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/ArkhalisDragon/ArkhalisDragon.github.io.git/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/ArkhalisDragon/ArkhalisDragon.github.io.git/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/ArkhalisDragon/ArkhalisDragon.github.io.git/js/utils.js?v=7.2.0"></script>
+
+  <script src="/ArkhalisDragon/ArkhalisDragon.github.io.git/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/ArkhalisDragon/ArkhalisDragon.github.io.git/js/schemes/muse.js?v=7.2.0"></script>
+
+
+
+  
+  <script src="/ArkhalisDragon/ArkhalisDragon.github.io.git/js/scrollspy.js?v=7.2.0"></script>
+<script src="/ArkhalisDragon/ArkhalisDragon.github.io.git/js/post-details.js?v=7.2.0"></script>
+
+
+
+  
+
+
+  <script src="/ArkhalisDragon/ArkhalisDragon.github.io.git/js/next-boot.js?v=7.2.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
